@@ -6,6 +6,19 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ZigzagConversion {
+    /*
+    The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this:
+     (you may want to display this pattern in a fixed font for better legibility)
+
+    Input: s = "PAYPALISHIRING", numRows = 3
+    Output: "PAHNAPLSIIGYIR"
+
+Constraints:
+
+1 <= s.length <= 1000
+s consists of English letters (lower-case and upper-case), ',' and '.'.
+1 <= numRows <= 1000
+     */
     public static void main(String[] args) {
         System.out.println(convert("PAYPALISHIRING", 3));
     }
