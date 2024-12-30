@@ -20,7 +20,7 @@ s consists of parentheses only '()[]{}'.
     static char[][] tokens = new char[][]{{'{','}'},{'(',')'},{'[',']'}};
 
     public static void main(String[] args) {
-        String expression = "[{}{}]";
+        String expression = "[{[]}{}]";
 
         System.out.println(checkBalance(expression) ? "balanced" : "not balanced");
     }

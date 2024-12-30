@@ -12,29 +12,17 @@ Constraints:
      */
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
+        System.out.println(isPalindrome1(1));
     }
 
-    public static boolean isPalindrome(int x) {
-        int length = (int) Math.log10(x)+1;
-        int i = 0;
+    public static boolean isPalindrome1(int x) {
+        int sum = 0;
         int y = x;
-        if(x == 0)
-            return true;
-
-        if (x < 0 || x%10 == 0)
-            return false;
-
-        while(i <= length/2){
-            int right = x%10;
-            int left = y/(int)Math.pow(10,length-1-i);
-            if(left != right)
-                return false;
-            x /= 10;
-            y %= (int)Math.pow(10,length-1-i);
-            i++;
+        while(x != 0){
+            int rem = x%10;
+            sum = sum*10 + rem;
+            x/=10;
         }
-
-        return true;
+        return sum/y==1;
     }
 }
